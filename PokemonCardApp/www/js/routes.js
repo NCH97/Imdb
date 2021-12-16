@@ -9,7 +9,21 @@ var routes = [
     url: './pages/home.html',
     on: {
       pageAfterIn: function test (e, page) {
+        happy();  
 
+      },
+      pageInit: function (e, page) {
+        // do something when page initialized
+      },
+    }
+  },
+  {
+    path: '/sanitaire/:id',
+    url: './pages/infoCard.html',
+    on: {
+      pageAfterIn: function test (e, page) {
+        valId(page.route.params.id)
+         singleDisplayCard();
 
       },
       pageInit: function (e, page) {

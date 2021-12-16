@@ -35,11 +35,7 @@ var app = new Framework7({
     },
   },
 });
-app.preloader.show();
-app.on('pageInit', function (page) {
-  console.log('Page is now initialized');
-  app.preloader.hide();
-});
+
 // Login Screen Demo
 $('#my-login-screen .login-button').on('click', function () {
   var username = $('#my-login-screen [name="username"]').val();

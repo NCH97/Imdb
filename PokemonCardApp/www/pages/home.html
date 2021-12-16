@@ -1,14 +1,14 @@
-<script src="../js/pokemon.js"></script>
+
 <div class="page" data-name="home">
   <div class="navbar">
     <div class="navbar-bg"></div>
     <div class="navbar-inner sliding">
-      <div class="title">Pokemon trad center</div>
+      <div class="title" ><a href="#top">Pokemon trad center</a></div>
     </div>
   </div>
   <div class="page-content">
 
-    <div class="searchbar-backdrop"></div>
+    <div class="searchbar-backdrop" ></div>
     <form class="searchbar">
       <div class="searchbar-inner">
         <div class="searchbar-input-wrap">
@@ -26,10 +26,17 @@
 
 
   </div>
-<button>
-  <i class="f7-icons">arrow_left_circle_fill</i>
-</button>
-<button>
-  <i class="f7-icons">arrow_right_circle_fill</i>
-</button>
+  <div class="row">
+    <!-- Each "cell" has col-[width in percents] class -->
+    <div class="col-50" id="back" ></div><button onclick="moin()" >
+      <i class="f7-icons">arrow_left_circle_fill</i>
+    </button></div>
+    <div class="col-50" > <button onclick="plus()" id="top">
+      <i class="f7-icons" id="foward"  >arrow_right_circle_fill</i>
+    </button>
+
+</div>
+</div>
+
+
 </div>
