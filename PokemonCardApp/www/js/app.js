@@ -2,7 +2,7 @@ var $ = Dom7;
 
 var device = Framework7.getDevice();
 var app = new Framework7({
-  name: 'MyApp', // App name
+  name: 'PokemonApp', // App name
   theme: 'auto', // Automatic theme detection
   el: '#app', // App root element
 
@@ -25,13 +25,20 @@ var app = new Framework7({
   },
   on: {
     init: function () {
+      
       var f7 = this;
       if (f7.device.cordova) {
         // Init cordova APIs (see cordova-app.js)
         cordovaApp.init(f7);
+        
       }
     },
   },
+});
+app.preloader.show();
+app.on('pageInit', function (page) {
+  console.log('Page is now initialized');
+  app.preloader.hide();
 });
 // Login Screen Demo
 $('#my-login-screen .login-button').on('click', function () {
