@@ -126,16 +126,16 @@ length: 3 retrait cost  : [14].retreatCost.length
     let priceCard = res.data[i].cardmarket.prices.trendPrice
     let idCard =  res.data[i].id
     let hp = res.data[i].hp
-    let  resistancesType = res.data[i].resistances[0].type 
-    let resistancesValue =  res.data[i].resistances[0].value
-    let nameAttack =  res.data[i].attacks[0].name
-    let attack = res.data[i].attacks[0].damage
-    let weaknessType  = res.data[i].weaknesses[0].type 
-    let weaknessValue = res.data[i].weaknesses[0].value
+  //  let resistancesType = res.data[i].resistances[0].type
+   // let resistancesValue =  res.data[i].resistances[0].value
+  //  let nameAttack =  res.data[i].attacks[0].name
+ //   let attack = res.data[i].attacks[0].damage
+ //   let weaknessType  = res.data[i].weaknesses[0].type 
+  //  let weaknessValue = res.data[i].weaknesses[0].value
     let buylink  = res.data[i].cardmarket.url
-    let retraitCost  = res.data[i].retreatCost.length
+    //let retraitCost  = res.data[i].retreatCost.length
     
-    cards.push({name:nameCard ,img: imageCard ,prix:priceCard,id:idCard});
+    cards.push({name:nameCard ,img: imageCard ,prix:priceCard,id:idCard,buy:buylink});
 }
 
 
@@ -158,7 +158,7 @@ function singleDisplayCard(){
       <img src="${cards[actualid].img}" />
       </a>
     <div class="card-footer">Prix : ${cards[actualid].prix}</div>
-    
+    <button class="col button button-fill"  onclick="${cards[actualid].buy}">Acheter</button>
   </div>      
   `;
   
